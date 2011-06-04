@@ -20,6 +20,6 @@ class Fixnum
     prime
   end
   def factorial
-    (1..self).inject { |x,y| x*y}
+    (1..self).inject { |x,y| x*y }
   end
 end
