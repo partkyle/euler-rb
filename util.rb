@@ -22,4 +22,9 @@ class Fixnum
   def factorial
     (1..self).inject { |x,y| x*y }
   end
+  def factors
+    (1..Math.sqrt(self)).collect { |i|
+      [i, (self / i)] if self % i
+    }.flatten.uniq.sort
+  end
 end
